@@ -1,2 +1,1 @@
-# work-smarter
-work day scheduler
+# Work Day Scheduler Starter Code
