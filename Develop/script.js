@@ -17,4 +17,4 @@ function initializeSchedule(){
         }
        
     toDoItems.push(todoObj);
-});
+})}
