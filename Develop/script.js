@@ -38,7 +38,7 @@ function setUpTimeBlocks(){
         $thisBlock.addClass("future").removeClass("past present");
       }
     });
-}
+};
 
 function renderSchedule(){
     toDoItems = localStorage.getItem("todos");
@@ -52,7 +52,7 @@ function renderSchedule(){
     }
   
     console.log(toDoItems);
-}
+};
 
 function saveHandler(){
     var $thisBlock = $(this).parent();
@@ -68,7 +68,7 @@ function saveHandler(){
     
     localStorage.setItem("todos", JSON.stringify(toDoItems));
     renderSchedule();
-}
+};
 
 $(document).ready(function(){
     setUpTimeBlocks();
@@ -80,4 +80,4 @@ $(document).ready(function(){
     $currentDay.text(currentDate);
     renderSchedule();
     $scheduleArea.on("click", "button", saveHandler);    
-});
+})};
