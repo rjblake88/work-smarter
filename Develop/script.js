@@ -18,3 +18,24 @@ function initializeSchedule(){
        
     toDoItems.push(todoObj);
 });
+
+//adding array to local storage
+localStorage.setItem("todos", JSON.stringify(toDoItems));
+
+//color change with time
+function setUpTimeBlocks(){
+    $timeBlocks.each(function(){
+      var $thisBlock = $(this);
+      var thisBlockHr = parseInt($thisBlock.attr("data-hour"));
+
+      if (thisBlockHr == currentHour) {
+        $thisBlock.addClass("present").removeClass("past future");
+      }
+      if (thisBlockHr < currentHour) {
+        $thisBlock.addClass("past").removeClass("present future");
+      }
+      if (thisBlockHr > currentHour) {
+        $thisBlock.addClass("future").removeClass("past present");
+      }
+    });
+}
